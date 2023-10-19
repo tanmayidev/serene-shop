@@ -1,4 +1,4 @@
-# Serenity Shop
+# Serene Shop
 
 Frontend of a Minimalistic Ecommerce store - Serenity Shop built using react.js
 
