@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Hero from "./components/Hero/Hero";
+import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </>
   );
