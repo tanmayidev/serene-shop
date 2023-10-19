@@ -6,6 +6,7 @@ import Footer from "../Footer/Footer";
 import Banner1 from "../../images/banner/banner1.jpg";
 import Banner2 from "../../images/banner/banner2.jpg";
 import TrendingScrollBar from "../TrendingScrollBar/TrendingScrollBar";
+import Newsletter from "../Newsletter/Newsletter";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
         text=" Products are all made to standard sizes so that you can mix and match them freely."
         img={Banner2}
       />
+      <Newsletter />
       <Footer />
     </>
   );
