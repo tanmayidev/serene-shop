@@ -1,11 +1,11 @@
-import "./Home.css";
+import "./Hero.css";
 import { useState } from "react";
-import Home1 from "../../images/home-img-1.jpg";
-import Home2 from "../../images/home-img-2.jpg";
-import Home3 from "../../images/home-img-3.jpg";
-import Home4 from "../../images/home-img-4.jpg";
+import Hero1 from "../../images/hero/hero-img-1.jpg";
+import Hero2 from "../../images/hero/hero-img-2.jpg";
+import Hero3 from "../../images/hero/hero-img-3.jpg";
+import Hero4 from "../../images/hero/hero-img-4.jpg";
 
-const Home = () => {
+const Hero = () => {
   const [overlay, setOverlay] = useState(false);
 
   function inOverlay() {
@@ -18,47 +18,47 @@ const Home = () => {
 
   return (
     <>
-      <div className="home-container">
+      <div className="hero-container">
         <div className="container">
           <div className="grid-container">
             <div className="featured grid-one">
               <div
-                id="1"
-                className={overlay ? "hard-overlay" : "lil-overlay"}
+                id="img1"
+                className="lil-overlay"
                 onMouseEnter={inOverlay}
                 onMouseLeave={outOverlay}
               ></div>
-              <img src={Home1} alt="img1" />
+              <img src={Hero1} alt="img1" />
               <p className="main-description">Live Comfortably</p>
             </div>
             <div className="featured grid-two">
               <div
-                id="2"
-                className={overlay ? "hard-overlay" : "lil-overlay"}
+                id="img2"
+                className="lil-overlay"
                 onMouseEnter={inOverlay}
                 onMouseLeave={outOverlay}
               ></div>
-              <img src={Home2} alt="img2" />
+              <img src={Hero2} alt="img2" />
               <p className="main-description">Skincare</p>
             </div>
             <div className="featured grid-four">
               <div
-                id="3"
-                className={overlay ? "hard-overlay" : "lil-overlay"}
+                id="img3"
+                className="lil-overlay"
                 onMouseEnter={inOverlay}
                 onMouseLeave={outOverlay}
               ></div>
-              <img src={Home3} alt="img3" />
+              <img src={Hero3} alt="img3" />
               <p className="main-description">Kitchen</p>
             </div>
             <div className="featured grid-four-low">
               <div
-                id="4"
-                className={overlay ? "hard-overlay" : "lil-overlay"}
+                id="img4"
+                className="lil-overlay"
                 onMouseEnter={inOverlay}
                 onMouseLeave={outOverlay}
               ></div>
-              <img src={Home4} alt="img4" />
+              <img src={Hero4} alt="img4" />
               <p className="main-description">Electronics</p>
             </div>
           </div>
@@ -68,4 +68,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Hero;
