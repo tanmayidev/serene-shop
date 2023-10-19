@@ -5,6 +5,7 @@ import BannerReverse from "../Banner/BannerReverse";
 import Footer from "../Footer/Footer";
 import Banner1 from "../../images/banner/banner1.jpg";
 import Banner2 from "../../images/banner/banner2.jpg";
+import TrendingScrollBar from "../TrendingScrollBar/TrendingScrollBar";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         text=" Products are all made to standard sizes so that you can mix and match them freely."
         img={Banner1}
       />
+      <TrendingScrollBar />
       <BannerReverse
         title="Comfortable & Elegante Living"
         text=" Products are all made to standard sizes so that you can mix and match them freely."
