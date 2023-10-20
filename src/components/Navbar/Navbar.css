@@ -1,3 +1,12 @@
+/* Logo */
+
+.logo-img {
+  width: 13rem;
+  cursor: pointer;
+}
+
+/* Navbar */
+
 .navbar {
   -webkit-box-shadow: 0px 4px 5px -5px rgba(0, 0, 0, 0.23);
   -moz-box-shadow: 0px 4px 5px -5px rgba(0, 0, 0, 0.23);
@@ -28,11 +37,6 @@
   height: 12rem;
 }
 
-.logo-img {
-  width: 13rem;
-  cursor: pointer;
-}
-
 .nav-links {
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -53,7 +57,7 @@
   cursor: pointer;
 }
 
-/* hamburger menu */
+/* Hamburger Menu */
 
 .hamburger-menu {
   display: none;
@@ -64,6 +68,12 @@
 .hamburger-cart {
   font-size: 2.3rem;
   display: none;
+  cursor: pointer;
+}
+
+.xmark {
+  margin: 4rem;
+  font-size: 2.3rem;
   cursor: pointer;
 }
 
@@ -116,7 +126,7 @@
   text-decoration: underline;
 }
 
-/* cart */
+/* Cart  */
 
 .cart-div {
   display: flex;
@@ -184,6 +194,8 @@
 .open-cart {
   right: 0;
 }
+
+/* Cart End */
 
 @media (max-width: 600px) {
   .nav-links {
