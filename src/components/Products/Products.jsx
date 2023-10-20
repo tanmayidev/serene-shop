@@ -1,14 +1,16 @@
 import ProductItem from "./ProductItem";
 import "./Products.css";
-import { items } from "../Data/ProductData";
+import { allProducts } from "../Data/AllProductsData";
 
 const Products = () => {
+  const recommendedItems = allProducts.filter((item) => item.id <= 8);
+
   return (
-    <div className="proud-container">
-      <h2 className="container proud-h2">Recommended Products</h2>
+    <div className="products-container">
+      <h2 className="container products-h2">Recommended Products</h2>
       <div className="container">
         <div className="products-grid">
-          {items.map(({ id, img, description, price }) => (
+          {recommendedItems.map(({ id, img, description, price }) => (
             <ProductItem
               key={id}
               img={img}
