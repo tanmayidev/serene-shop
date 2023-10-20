@@ -1,6 +1,21 @@
 import Img2 from "../../images/products/2.jpg";
+import { useState } from "react";
 
 const CartItem = () => {
+  const [quantity, setQuantity] = useState(1);
+
+  const increase = () => {
+    if (quantity >= 1) {
+      setQuantity(quantity + 1);
+    }
+  };
+
+  const decrease = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
   return (
     <div className="cart-item">
       <div className="cart-img">
@@ -9,9 +24,9 @@ const CartItem = () => {
       <div className="cart-middle">
         <p className="cart-name">Toaster</p>
         <div className="cart-btns">
-          <button>-</button>
-          <p className="quantity">1</p>
-          <button>+</button>
+          <button onClick={decrease}>-</button>
+          <p className="quantity">{quantity}</p>
+          <button onClick={increase}>+</button>
         </div>
       </div>
       <div className="cart-right">
