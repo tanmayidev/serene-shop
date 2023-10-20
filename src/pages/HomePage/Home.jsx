@@ -1,5 +1,5 @@
 import Hero from "../../components/Hero/Hero";
-import Products from "../../components/Products/Products";
+import Products from "../../components/RecommendedProducts/Products";
 import Banner from "../../components/Banner/Banner";
 import BannerReverse from "../../components/Banner/BannerReverse";
 import Footer from "../../components/Footer/Footer";

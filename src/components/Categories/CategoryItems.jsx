@@ -1,4 +1,4 @@
-import ProductItem from "../Products/ProductItem";
+import ProductItem from "../RecommendedProducts/ProductItem";
 
 const CategoryItems = ({ filteredProducts }) => {
   return (
