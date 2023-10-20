@@ -1,8 +1,10 @@
 import "./TrendingScrollBar.css";
 import TrendingItem from "./TrendingItem";
-import { items } from "../Data/ProductData";
+import { allProducts } from "../Data/AllProductsData";
 
 const TrendingScrollBar = () => {
+  const trendingItems = allProducts.filter((item) => item.id <= 8);
+
   const slideLeft = () => {
     let slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft - 220;
@@ -24,7 +26,7 @@ const TrendingScrollBar = () => {
           </div>
         </div>
         <div className="row-container" id="slider">
-          {items.map(({ id, img, description, price }) => (
+          {trendingItems.map(({ id, img, description, price }) => (
             <TrendingItem
               key={id}
               img={img}
