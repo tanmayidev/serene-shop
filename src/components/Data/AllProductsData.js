@@ -39,7 +39,7 @@ export const allProducts = [
     price: 79,
   },
   {
-    id: "forniture",
+    id: "furniture",
     img: Img4,
     description: "Pulp Unit - 5 Compartments",
     price: 254,
@@ -63,13 +63,13 @@ export const allProducts = [
     price: 220,
   },
   {
-    id: "forniture",
+    id: "furniture",
     img: Img8,
     description: "Gejst Shelf A Black Ash/Black",
     price: 115,
   },
   {
-    id: "forniture",
+    id: "furniture",
     img: Img9,
     description: "Cube Lolo Vase Black",
     price: 161,
