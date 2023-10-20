@@ -3,16 +3,16 @@ import TrendingItem from "./TrendingItem";
 import { allProducts } from "../Data/AllProductsData";
 
 const TrendingScrollBar = () => {
-  const trendingItems = allProducts.filter((item) => item.id <= 8);
+  const trendingItems = allProducts.filter((item) => item.id >= 8);
 
   const slideLeft = () => {
     let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 220;
+    slider.scrollLeft = slider.scrollLeft - 235;
   };
 
   const slideRight = () => {
     let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 220;
+    slider.scrollLeft = slider.scrollLeft + 235;
   };
 
   return (

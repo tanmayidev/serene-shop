@@ -262,6 +262,7 @@
   height: 3rem;
   background-color: black;
   color: white;
+  cursor: pointer;
 }
 
 .cart-btns p {
