@@ -1,23 +1,16 @@
 import "./TrendingScrollBar.css";
 import TrendingItem from "./TrendingItem";
-import Img1 from "../../images/products/1.jpg";
-import Img2 from "../../images/products/2.jpg";
-import Img3 from "../../images/products/3.png";
-import Img4 from "../../images/products/4.jpg";
-import Img5 from "../../images/products/5.jpg";
-import Img6 from "../../images/products/6.jpg";
-import Img7 from "../../images/products/7.jpg";
-import Img8 from "../../images/products/8.jpg";
+import { items } from "../Data/ProductData";
 
 const TrendingScrollBar = () => {
   const slideLeft = () => {
     let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 235;
+    slider.scrollLeft = slider.scrollLeft - 220;
   };
 
   const slideRight = () => {
     let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 235;
+    slider.scrollLeft = slider.scrollLeft + 220;
   };
 
   return (
@@ -31,46 +24,14 @@ const TrendingScrollBar = () => {
           </div>
         </div>
         <div className="row-container" id="slider">
-          <TrendingItem
-            img={Img2}
-            description="Pop-Up Toaster, White, 45cm"
-            price="49$"
-          />
-          <TrendingItem
-            img={Img7}
-            description="Pop-Up Toaster, White, 45cm"
-            price="49$"
-          />
-          <TrendingItem
-            img={Img3}
-            description="Pop-Up Toaster, White, 45cm"
-            price="49$"
-          />
-          <TrendingItem
-            img={Img4}
-            description="Pop-Up Toaster, White, 45cm"
-            price="49$"
-          />
-          <TrendingItem
-            img={Img5}
-            description="Pop-Up Toaster, White, 45cm"
-            price="49$"
-          />
-          <TrendingItem
-            img={Img6}
-            description="Pop-Up Toaster, White, 45cm"
-            price="49$"
-          />
-          <TrendingItem
-            img={Img1}
-            description="Pop-Up Toaster, White, 45cm"
-            price="49$"
-          />
-          <TrendingItem
-            img={Img8}
-            description="Pop-Up Toaster, White, 45cm"
-            price="49$"
-          />
+          {items.map(({ id, img, description, price }) => (
+            <TrendingItem
+              key={id}
+              img={img}
+              description={description}
+              price={price}
+            />
+          ))}
         </div>
       </div>
     </div>

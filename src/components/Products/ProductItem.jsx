@@ -3,7 +3,7 @@ const ProductItem = ({ img, description, price }) => {
     <>
       <div className="product normal">
         <div className="product-header">
-          <img src={img} alt="product1" />
+          <img src={img} alt="product" />
         </div>
         <div className="product-details">
           <p>{description}</p>

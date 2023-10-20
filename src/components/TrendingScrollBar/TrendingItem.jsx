@@ -1,6 +1,6 @@
 import "./TrendingScrollBar.css";
 
-const TrendingItem = ({ img, price, description }) => {
+const TrendingItem = ({ img, description, price }) => {
   return (
     <div className="row-item">
       <div className="item-header">

@@ -31,6 +31,15 @@ const Navbar = () => {
           <Link to="/">furniture</Link>
         </div>
       </div>
+      <div className="open-cart">
+        <div className="cart-title-btn">
+          <h2>Your Shopping Cart (0 items)</h2>
+          <i
+            onClick={() => setMobileNav(!mobileNav)}
+            className="fa-sharp fa-solid fa-xmark"
+          ></i>
+        </div>
+      </div>
       <nav className="navbar">
         <div className="container">
           <div className={`nav-container ${sticky ? "cont-sticky" : ""}`}>
