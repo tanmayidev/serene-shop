@@ -1,12 +1,12 @@
-import Hero from "../components/Hero/Hero";
-import Products from "../components/Products/Products";
-import Banner from "../components/Banner/Banner";
-import BannerReverse from "../components/Banner/BannerReverse";
-import Footer from "../components/Footer/Footer";
-import Banner1 from "../images/banner/banner1.jpg";
-import Banner2 from "../images/banner/banner2.jpg";
-import TrendingScrollBar from "../components/TrendingScrollBar/TrendingScrollBar";
-import Newsletter from "../components/Newsletter/Newsletter";
+import Hero from "../../components/Hero/Hero";
+import Products from "../../components/Products/Products";
+import Banner from "../../components/Banner/Banner";
+import BannerReverse from "../../components/Banner/BannerReverse";
+import Footer from "../../components/Footer/Footer";
+import Banner1 from "../../images/banner/banner1.jpg";
+import Banner2 from "../../images/banner/banner2.jpg";
+import TrendingScrollBar from "../../components/TrendingScrollBar/TrendingScrollBar";
+import Newsletter from "../../components/Newsletter/Newsletter";
 
 const Home = () => {
   return (
