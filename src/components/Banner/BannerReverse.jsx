@@ -1,4 +1,5 @@
 import "./Banner.css";
+import { Link } from "react-router-dom";
 
 const BannerReverse = ({ title, text, img }) => {
   return (
@@ -9,7 +10,9 @@ const BannerReverse = ({ title, text, img }) => {
             <div className="text">
               <h2>{title}</h2>
               <p>{text}</p>
-              <button>Shop now</button>
+              <Link onClick={() => window.scrollTo(0, 0)} to="categories">
+                <button>Shop now</button>
+              </Link>
             </div>
           </div>
           <div className="img-side">
