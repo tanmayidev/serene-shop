@@ -1,11 +1,11 @@
 import CategoryItems from "./CategoryItems";
 
-const CategoriesBody = () => {
+const CategoriesBody = ({ filteredProducts }) => {
   return (
-    <div className="proud-container">
+    <div className="categories-container">
       <div className="container">
-        <div className="products-grid">
-          <CategoryItems />
+        <div className="categories-grid">
+          <CategoryItems filteredProducts={filteredProducts} />
         </div>
       </div>
     </div>

@@ -1,10 +1,9 @@
-import { allProducts } from "../Data/AllProductsData";
 import ProductItem from "../Products/ProductItem";
 
-const CategoryItems = () => {
+const CategoryItems = ({ filteredProducts }) => {
   return (
     <>
-      {allProducts.map(({ id, img, description, price }) => (
+      {filteredProducts.map(({ id, img, description, price }) => (
         <ProductItem
           key={id}
           img={img}
