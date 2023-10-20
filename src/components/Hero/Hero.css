@@ -23,6 +23,10 @@
   font-weight: 600;
 }
 
+.hero-container {
+  padding-top: 12rem;
+}
+
 .featured img {
   height: 100%;
   width: 100%;
