@@ -1,63 +1,32 @@
 import "./Hero.css";
-import { useState } from "react";
 import Hero1 from "../../images/hero/hero-img-1.jpg";
 import Hero2 from "../../images/hero/hero-img-2.jpg";
 import Hero3 from "../../images/hero/hero-img-3.jpg";
 import Hero4 from "../../images/hero/hero-img-4.jpg";
 
 const Hero = () => {
-  const [overlay, setOverlay] = useState(false);
-
-  function inOverlay() {
-    setOverlay(true);
-  }
-
-  function outOverlay() {
-    setOverlay(false);
-  }
-
   return (
     <>
       <div className="hero-container">
         <div className="container">
           <div className="grid-container">
             <div className="featured grid-one">
-              <div
-                id="img1"
-                className="lil-overlay"
-                onMouseEnter={inOverlay}
-                onMouseLeave={outOverlay}
-              ></div>
+              <div id="img1" className="lil-overlay"></div>
               <img src={Hero1} alt="img1" />
               <p className="main-description">Live Comfortably</p>
             </div>
             <div className="featured grid-two">
-              <div
-                id="img2"
-                className="lil-overlay"
-                onMouseEnter={inOverlay}
-                onMouseLeave={outOverlay}
-              ></div>
+              <div id="img2" className="lil-overlay"></div>
               <img src={Hero2} alt="img2" />
               <p className="main-description">Skincare</p>
             </div>
             <div className="featured grid-four">
-              <div
-                id="img3"
-                className="lil-overlay"
-                onMouseEnter={inOverlay}
-                onMouseLeave={outOverlay}
-              ></div>
+              <div id="img3" className="lil-overlay"></div>
               <img src={Hero3} alt="img3" />
               <p className="main-description">Kitchen</p>
             </div>
             <div className="featured grid-four-low">
-              <div
-                id="img4"
-                className="lil-overlay"
-                onMouseEnter={inOverlay}
-                onMouseLeave={outOverlay}
-              ></div>
+              <div id="img4" className="lil-overlay"></div>
               <img src={Hero4} alt="img4" />
               <p className="main-description">Electronics</p>
             </div>
