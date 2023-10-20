@@ -4,6 +4,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
+  const [mobileNav, setMobileNav] = useState(false);
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -17,6 +18,19 @@ const Navbar = () => {
 
   return (
     <>
+      <div
+        className={`mobile-nav-full ${mobileNav ? "open-nav" : "closed-nav"}`}
+      >
+        <i
+          onClick={() => setMobileNav(!mobileNav)}
+          className="fa-sharp fa-solid fa-xmark"
+        ></i>
+        <div className="mobile-links">
+          <Link to="/">categories</Link>
+          <Link to="/">lamps</Link>
+          <Link to="/">furniture</Link>
+        </div>
+      </div>
       <nav className="navbar">
         <div className="container">
           <div className={`nav-container ${sticky ? "cont-sticky" : ""}`}>
@@ -28,6 +42,13 @@ const Navbar = () => {
               <Link to="/">lamps</Link>
               <Link to="/">furniture</Link>
               <i className="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div className="hamburger-menu">
+              <i className="fa-solid fa-cart-shopping hamburger-cart"></i>
+              <i
+                onClick={() => setMobileNav(!mobileNav)}
+                className="fa-solid fa-bars hamburger-hamb"
+              ></i>
             </div>
           </div>
         </div>
