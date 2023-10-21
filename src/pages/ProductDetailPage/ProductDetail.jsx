@@ -7,6 +7,11 @@ import "./ProductDetail.css";
 
 const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
+  const [image, setImage] = useState(allProducts[0].img);
+
+  const changeImage = (e) => {
+    setImage(e.target.src);
+  };
 
   const increase = () => {
     if (quantity >= 1) {
@@ -35,9 +40,21 @@ const ProductDetail = () => {
                 <img src={allProducts[0].img} alt="product" />
               </div>
               <div className="small-imgs">
-                <img src={allProducts[0].img} alt="product" />
-                <img src={allProducts[0].otherImgs[0]} alt="product" />
-                <img src={allProducts[0].otherImgs[1]} alt="product" />
+                <img
+                  onMouseOver={changeImage}
+                  src={allProducts[0].img}
+                  alt="product"
+                />
+                <img
+                  onMouseOver={changeImage}
+                  src={allProducts[0].otherImgs[0]}
+                  alt="product"
+                />
+                <img
+                  onMouseOver={changeImage}
+                  src={allProducts[0].otherImgs[1]}
+                  alt="product"
+                />
               </div>
             </div>
             <div className="product-right">
