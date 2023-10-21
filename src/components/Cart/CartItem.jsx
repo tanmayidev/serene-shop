@@ -1,9 +1,10 @@
 import { useContext } from "react";
-import { CartContext, calculateTotalPrice } from "../../contexts/CartContext";
+import { CartContext } from "../../contexts/CartContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
 const CartItem = ({ product }) => {
   const [, dispatch] = useContext(CartContext);
-  console.log("product", product);
 
   const increase = () => {
     dispatch({ type: "ADD_TO_CART", payload: { ...product, quantity: 1 } });
@@ -15,13 +16,17 @@ const CartItem = ({ product }) => {
     }
   };
 
+  const removeItem = () => {
+    dispatch({ type: "REMOVE_FROM_CART", payload: product.id });
+  };
+
   return (
     <div className="cart-item">
       <div className="cart-img">
         <img src={product.img} alt="product" />
       </div>
       <div className="cart-middle">
-        <p className="cart-name">{product.name}</p>
+        <p className="cart-name">{product.description}</p>
         <div className="cart-btns">
           <button onClick={decrease}>-</button>
           <p className="quantity">{product.quantity}</p>
@@ -30,7 +35,7 @@ const CartItem = ({ product }) => {
       </div>
       <div className="cart-right">
         <p className="cart-price">{product.price}$</p>
-        <i className="fa-sharp fa-solid fa-xmark"></i>
+        <FontAwesomeIcon onClick={removeItem} icon={faX} />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import EmptyCart from "../Cart/EmptyCart";
 import CartWithItems from "../Cart/CartWithItems";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,8 +11,18 @@ const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [mobileNav, setMobileNav] = useState(false);
   const [cart, setCart] = useState(false);
+  const [totalItems, setTotalItems] = useState(0);
 
   const [cartState, dispatch] = useContext(CartContext);
+  const { items } = cartState;
+
+  useEffect(() => {
+    let num = 0;
+    for (let i = 0; i < items.length; i++) {
+      num += 1 * items[i].quantity;
+    }
+    setTotalItems(num);
+  }, [items]);
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -65,13 +75,15 @@ const Navbar = () => {
       {/* cart */}
       <div className={`cart-div ${cart ? "open-cart" : "closed-cart"}`}>
         <div className="cart-title-btn">
-          <h2 className="cart-full-h2">Your Shopping Cart (0 items)</h2>
+          <h2 className="cart-full-h2">
+            Your Shopping Cart ({totalItems} items)
+          </h2>
           <FontAwesomeIcon onClick={openCart} icon={faX} />
         </div>
 
         {/* cart body */}
         <div className="cart-body">
-          {cartState.items.length === 0 ? (
+          {items.length === 0 ? (
             <EmptyCart openCart={openCart} />
           ) : (
             <CartWithItems />
