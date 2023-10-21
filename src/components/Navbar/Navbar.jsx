@@ -46,9 +46,15 @@ const Navbar = () => {
           icon={faX}
         />
         <div className="mobile-links">
-          <Link to="/categories">categories</Link>
-          <Link to="/">lamps</Link>
-          <Link to="/">furniture</Link>
+          <Link onClick={() => setMobileNav(!mobileNav)} to="/categories">
+            categories
+          </Link>
+          <Link onClick={() => setMobileNav(!mobileNav)} to="/">
+            lamps
+          </Link>
+          <Link onClick={() => setMobileNav(!mobileNav)} to="/">
+            furnitures
+          </Link>
         </div>
       </div>
 
