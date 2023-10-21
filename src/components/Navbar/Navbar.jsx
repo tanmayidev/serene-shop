@@ -67,17 +67,17 @@ const Navbar = () => {
       {/* cart */}
       <div className={`cart-div ${cart ? "open-cart" : "closed-cart"}`}>
         <div className="cart-title-btn">
-          {cart ? (
-            <h2 className="cart-full-h2">Your Shopping Cart (0 items)</h2>
-          ) : (
-            <h2>Your Shopping Cart (0 items)</h2>
-          )}
+          <h2 className="cart-full-h2">Your Shopping Cart (0 items)</h2>
           <FontAwesomeIcon onClick={openCart} icon={faX} />
         </div>
 
         {/* cart body */}
         <div className="cart-body">
-          {cartArray.length === 0 ? <EmptyCart /> : <CartWithItems />}
+          {cartArray.length === 0 ? (
+            <EmptyCart opeCart={openCart} />
+          ) : (
+            <CartWithItems />
+          )}
         </div>
       </div>
       {/* --------------------------------------------- */}
@@ -96,11 +96,8 @@ const Navbar = () => {
               <Link onClick={() => window.scrollTo(0, 0)} to="/categories">
                 categories
               </Link>
-              <Link onClick={() => window.scrollTo(0, 0)} to="/">
-                lamps
-              </Link>
-              <Link onClick={() => window.scrollTo(0, 0)} to="/">
-                furnitures
+              <Link onClick={() => window.scrollTo(0, 0)} to="/product">
+                product detail
               </Link>
               <FontAwesomeIcon onClick={openCart} icon={faCartShopping} />
             </div>

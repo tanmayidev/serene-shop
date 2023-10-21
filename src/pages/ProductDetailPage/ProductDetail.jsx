@@ -7,16 +7,23 @@ import "./ProductDetail.css";
 
 const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
+
   const increase = () => {
     if (quantity >= 1) {
       setQuantity(quantity + 1);
     }
   };
+
   const decrease = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   };
+
+  const calcPrice = (quantity) => {
+    return quantity * allProducts[0].price;
+  };
+
   return (
     <>
       <div className="product-page-div">
@@ -42,7 +49,7 @@ const ProductDetail = () => {
                   <p className="quantity">{quantity}</p>
                   <button onClick={increase}>+</button>
                 </div>
-                <p className="product-price">{allProducts[0].price}.00$</p>
+                <p className="product-price">{calcPrice(quantity)}.00$</p>
               </div>
               <div className="atc-buy">
                 <button className="atc-btn">add to cart</button>
