@@ -4,10 +4,14 @@ import TrendingScrollBar from "../../components/TrendingScrollBar/TrendingScroll
 import Newsletter from "../../components/Newsletter/Newsletter";
 import Footer from "../../components/Footer/Footer";
 import "./ProductDetail.css";
+import { useParams } from "react-router";
 
 const ProductDetail = () => {
+  const { id } = useParams();
+  const item = allProducts.filter((item) => item.id === parseInt(id));
+
   const [quantity, setQuantity] = useState(1);
-  const [image, setImage] = useState(allProducts[0].img);
+  const [image, setImage] = useState(item[0].img);
 
   const changeImage = (e) => {
     setImage(e.target.src);
@@ -26,7 +30,7 @@ const ProductDetail = () => {
   };
 
   const calcPrice = (quantity) => {
-    return quantity * allProducts[0].price;
+    return quantity * item[0].price;
   };
 
   return (
@@ -34,27 +38,24 @@ const ProductDetail = () => {
       <div className="product-page-div">
         <div className="container">
           <div className="product-div">
-            <h3 className="product-big-name">Chair Sheepskin</h3>
+            <h3 className="product-big-name">{item[0].description}</h3>
             <div className="product-left">
               <div className="big-img">
-                <img src={allProducts[0].img} alt="product" />
+                <img src={image} alt="product" />
               </div>
               <div className="small-imgs">
                 <img
                   onMouseOver={changeImage}
-                  src={allProducts[0].img}
+                  src={item[0].img}
                   alt="product"
                 />
-                <img
-                  onMouseOver={changeImage}
-                  src={allProducts[0].otherImgs[0]}
-                  alt="product"
-                />
-                <img
-                  onMouseOver={changeImage}
-                  src={allProducts[0].otherImgs[1]}
-                  alt="product"
-                />
+                {item[0].otherImgs.map((otherImage) => (
+                  <img
+                    onMouseOver={changeImage}
+                    src={otherImage}
+                    alt="product"
+                  />
+                ))}
               </div>
             </div>
             <div className="product-right">

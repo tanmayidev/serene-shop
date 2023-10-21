@@ -96,7 +96,10 @@ const Navbar = () => {
               <Link onClick={() => window.scrollTo(0, 0)} to="/categories">
                 categories
               </Link>
-              <Link onClick={() => window.scrollTo(0, 0)} to="/product">
+              <Link
+                onClick={() => window.scrollTo(0, 0)}
+                to="/categories/product/1"
+              >
                 product detail
               </Link>
               <FontAwesomeIcon onClick={openCart} icon={faCartShopping} />

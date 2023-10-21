@@ -1,6 +1,7 @@
 import "./TrendingScrollBar.css";
 import TrendingItem from "./TrendingItem";
 import { allProducts } from "../Data/AllProductsData";
+import { Link } from "react-router-dom";
 
 const TrendingScrollBar = () => {
   const trendingItems = allProducts.filter((item) => item.id >= 8);
@@ -27,12 +28,17 @@ const TrendingScrollBar = () => {
         </div>
         <div className="row-container" id="slider">
           {trendingItems.map(({ id, img, description, price }) => (
-            <TrendingItem
-              key={id}
-              img={img}
-              description={description}
-              price={price}
-            />
+            <Link
+              onClick={() => window.top(0, 0)}
+              to={`/categories/product/${id}`}
+            >
+              <TrendingItem
+                key={id}
+                img={img}
+                description={description}
+                price={price}
+              />
+            </Link>
           ))}
         </div>
       </div>
