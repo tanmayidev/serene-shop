@@ -12,10 +12,7 @@ const Products = () => {
       <div className="container">
         <div className="products-grid">
           {recommendedItems.map(({ id, img, description, price }) => (
-            <Link
-              onClick={() => window.top(0, 0)}
-              to={`/categories/product/${id}`}
-            >
+            <Link to={`/categories/product/${id}`}>
               <ProductItem
                 key={id}
                 id={id}

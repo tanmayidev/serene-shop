@@ -28,10 +28,7 @@ const TrendingScrollBar = () => {
         </div>
         <div className="row-container" id="slider">
           {trendingItems.map(({ id, img, description, price }) => (
-            <Link
-              onClick={() => window.top(0, 0)}
-              to={`/categories/product/${id}`}
-            >
+            <Link to={`/categories/product/${id}`}>
               <TrendingItem
                 key={id}
                 img={img}
