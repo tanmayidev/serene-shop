@@ -1,36 +1,35 @@
-import Img2 from "../../images/products/2.jpg";
-import { useState } from "react";
+import { useContext } from "react";
+import { CartContext, calculateTotalPrice } from "../../contexts/CartContext";
 
-const CartItem = () => {
-  const [quantity, setQuantity] = useState(1);
+const CartItem = ({ product }) => {
+  const [, dispatch] = useContext(CartContext);
+  console.log("product", product);
 
   const increase = () => {
-    if (quantity >= 1) {
-      setQuantity(quantity + 1);
-    }
+    dispatch({ type: "ADD_TO_CART", payload: { ...product, quantity: 1 } });
   };
 
   const decrease = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
+    if (product.quantity > 1) {
+      dispatch({ type: "ADD_TO_CART", payload: { ...product, quantity: -1 } });
     }
   };
 
   return (
     <div className="cart-item">
       <div className="cart-img">
-        <img src={Img2} alt="product" />
+        <img src={product.img} alt="product" />
       </div>
       <div className="cart-middle">
-        <p className="cart-name">Toaster</p>
+        <p className="cart-name">{product.name}</p>
         <div className="cart-btns">
           <button onClick={decrease}>-</button>
-          <p className="quantity">{quantity}</p>
+          <p className="quantity">{product.quantity}</p>
           <button onClick={increase}>+</button>
         </div>
       </div>
       <div className="cart-right">
-        <p className="cart-price">100.00$</p>
+        <p className="cart-price">{product.price}$</p>
         <i className="fa-sharp fa-solid fa-xmark"></i>
       </div>
     </div>

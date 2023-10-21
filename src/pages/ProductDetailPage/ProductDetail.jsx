@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { allProducts } from "../../components/Data/AllProductsData";
 import TrendingScrollBar from "../../components/TrendingScrollBar/TrendingScrollBar";
 import Newsletter from "../../components/Newsletter/Newsletter";
 import Footer from "../../components/Footer/Footer";
 import "./ProductDetail.css";
 import { useParams } from "react-router";
+import { CartContext } from "../../contexts/CartContext";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -13,16 +14,23 @@ const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
   const [image, setImage] = useState(null);
 
+  const [, dispatch] = useContext(CartContext);
+
   useEffect(() => {
     window.scrollTo(0, 0);
     const selectedItem = allProducts.find(
       (product) => product.id === parseInt(id)
     );
     if (selectedItem) {
+      setQuantity(1);
       setItem(selectedItem);
       setImage(selectedItem.img);
     }
   }, [id]);
+
+  const addToCart = () => {
+    dispatch({ type: "ADD_TO_CART", payload: { ...item, quantity } });
+  };
 
   const changeImage = (e) => {
     setImage(e.target.src);
@@ -81,7 +89,9 @@ const ProductDetail = () => {
                   <p className="product-price">{calcPrice(quantity)}.00$</p>
                 </div>
                 <div className="atc-buy">
-                  <button className="atc-btn">add to cart</button>
+                  <button className="atc-btn" onClick={addToCart}>
+                    add to cart
+                  </button>
                   <button className="buy-btn">buy now</button>
                 </div>
               </div>

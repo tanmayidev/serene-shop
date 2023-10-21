@@ -1,17 +1,18 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import EmptyCart from "../Cart/EmptyCart";
 import CartWithItems from "../Cart/CartWithItems";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX, faCartShopping, faBars } from "@fortawesome/free-solid-svg-icons";
+import { CartContext } from "../../contexts/CartContext";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [mobileNav, setMobileNav] = useState(false);
   const [cart, setCart] = useState(false);
-  // array for cart items
-  const cartArray = [];
+
+  const [cartState, dispatch] = useContext(CartContext);
 
   const handleScroll = () => {
     if (window.scrollY > 10) {
@@ -70,7 +71,7 @@ const Navbar = () => {
 
         {/* cart body */}
         <div className="cart-body">
-          {cartArray.length === 0 ? (
+          {cartState.items.length === 0 ? (
             <EmptyCart openCart={openCart} />
           ) : (
             <CartWithItems />
@@ -97,6 +98,7 @@ const Navbar = () => {
                 product detail
               </Link>
               <FontAwesomeIcon onClick={openCart} icon={faCartShopping} />
+              {/* Add Red Circle on top of Shopping Cart - When cartState.items.length > 1 */}
             </div>
             <div className="hamburger-menu">
               <FontAwesomeIcon
