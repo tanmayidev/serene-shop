@@ -49,11 +49,11 @@ const Navbar = () => {
           <Link onClick={() => setMobileNav(!mobileNav)} to="/categories">
             categories
           </Link>
-          <Link onClick={() => setMobileNav(!mobileNav)} to="/">
-            lamps
-          </Link>
-          <Link onClick={() => setMobileNav(!mobileNav)} to="/">
-            furnitures
+          <Link
+            onClick={() => setMobileNav(!mobileNav)}
+            to="/categories/product/19"
+          >
+            product detail
           </Link>
         </div>
       </div>
@@ -74,7 +74,7 @@ const Navbar = () => {
         {/* cart body */}
         <div className="cart-body">
           {cartArray.length === 0 ? (
-            <EmptyCart opeCart={openCart} />
+            <EmptyCart openCart={openCart} />
           ) : (
             <CartWithItems />
           )}
