@@ -5,7 +5,7 @@ const CategoryItems = ({ filteredProducts }) => {
   return (
     <>
       {filteredProducts.map(({ id, img, description, price }) => (
-        <Link to={`/categories/product/${id}`}>
+        <Link to={`/product/${id}`}>
           <ProductItem
             key={id}
             img={img}

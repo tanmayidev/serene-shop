@@ -49,10 +49,7 @@ const Navbar = () => {
           <Link onClick={() => setMobileNav(!mobileNav)} to="/categories">
             categories
           </Link>
-          <Link
-            onClick={() => setMobileNav(!mobileNav)}
-            to="/categories/product/19"
-          >
+          <Link onClick={() => setMobileNav(!mobileNav)} to="/product/19">
             product detail
           </Link>
         </div>
@@ -96,10 +93,7 @@ const Navbar = () => {
               <Link onClick={() => window.scrollTo(0, 0)} to="/categories">
                 categories
               </Link>
-              <Link
-                onClick={() => window.scrollTo(0, 0)}
-                to="/categories/product/1"
-              >
+              <Link onClick={() => window.scrollTo(0, 0)} to="/product/1">
                 product detail
               </Link>
               <FontAwesomeIcon onClick={openCart} icon={faCartShopping} />
