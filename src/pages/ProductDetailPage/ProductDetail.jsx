@@ -10,10 +10,8 @@ import { CartContext } from "../../contexts/CartContext";
 const ProductDetail = () => {
   const { id } = useParams();
   const [item, setItem] = useState(null); // Use state to store the item
-
   const [quantity, setQuantity] = useState(1);
   const [image, setImage] = useState(null);
-
   const [, dispatch] = useContext(CartContext);
 
   useEffect(() => {
