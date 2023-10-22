@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="">
-    <img src="src/images/logo-with-bg.png"  alt="Logo" >
+    <img src="src/images/logo-with-bg.png"  alt="Logo" href="https://github.com/tanmayidev/serene-shop" >
   </a>
 </div>
 
@@ -34,7 +34,7 @@ This is a minimalist e-commerce website built with React and CSS. This website f
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/tanmayidev/serene-shop.git
    ```
 2. Install NPM packages
    ```sh
@@ -65,7 +65,7 @@ This is a minimalist e-commerce website built with React and CSS. This website f
   - [ ] Add Unit Tests
   - [ ] Add E2E Tests
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/tanmayidev/serene-shop/issues) for a full list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
