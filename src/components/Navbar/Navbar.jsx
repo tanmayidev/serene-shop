@@ -6,6 +6,7 @@ import CartWithItems from "../Cart/CartWithItems";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX, faCartShopping, faBars } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../contexts/CartContext";
+import LogoImg from "../../images/logo.png";
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
@@ -97,7 +98,7 @@ const Navbar = () => {
             <Link to="/">
               <img
                 onClick={scrollToTop}
-                src=""
+                src={LogoImg}
                 alt="logo"
                 className="logo-img"
               />
@@ -109,8 +110,15 @@ const Navbar = () => {
               <Link onClick={() => window.scrollTo(0, 0)} to="/product/1">
                 product detail
               </Link>
-              <FontAwesomeIcon onClick={openCart} icon={faCartShopping} />
-              {/* Add Red Circle on top of Shopping Cart - When cartState.items.length > 1 */}
+              <span
+                className={
+                  totalItems < 1 ? "cart-icon" : "cart-icon with-items"
+                }
+                data-array-length={totalItems}
+                onClick={openCart}
+              >
+                <FontAwesomeIcon icon={faCartShopping} />
+              </span>
             </div>
             <div className="hamburger-menu">
               <FontAwesomeIcon
