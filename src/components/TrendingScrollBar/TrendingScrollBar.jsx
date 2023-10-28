@@ -37,7 +37,7 @@ const TrendingScrollBar = () => {
         </div>
         <div className="row-container" id="slider">
           {trendingItems.map(({ id, img, description, price }) => (
-            <Link key={id} to={`/product/${id}`}>
+            <Link key={id} to={`/serene-shop/product/${id}`}>
               <TrendingItem
                 key={id}
                 img={img}

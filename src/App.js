@@ -9,9 +9,9 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="categories" element={<Categories />} />
-        <Route path="product/:id" element={<ProductDetail />} />
+        <Route path="/serene-shop" element={<Home />} />
+        <Route path="/serene-shop/categories" element={<Categories />} />
+        <Route path="/serene-shop/product/:id" element={<ProductDetail />} />
       </Routes>
     </>
   );

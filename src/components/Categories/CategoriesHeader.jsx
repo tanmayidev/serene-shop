@@ -8,7 +8,7 @@ const CategoriesHeader = ({ categoryBtn, handleCategoryChange }) => {
       <div className="container">
         <div className="catego-header">
           <div className="title-home">
-            <Link onClick={() => window.scrollTo(0, 0)} to="/">
+            <Link onClick={() => window.scrollTo(0, 0)} to="/serene-shop">
               <FontAwesomeIcon icon={faAnglesLeft} /> Home
             </Link>
             <h3>{categoryBtn}</h3>

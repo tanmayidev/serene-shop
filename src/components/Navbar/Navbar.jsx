@@ -58,10 +58,16 @@ const Navbar = () => {
           icon={faX}
         />
         <div className="mobile-links">
-          <Link onClick={() => setMobileNav(!mobileNav)} to="/categories">
+          <Link
+            onClick={() => setMobileNav(!mobileNav)}
+            to="/serene-shop/categories"
+          >
             categories
           </Link>
-          <Link onClick={() => setMobileNav(!mobileNav)} to="/product/19">
+          <Link
+            onClick={() => setMobileNav(!mobileNav)}
+            to="/serene-shop/product/19"
+          >
             product detail
           </Link>
         </div>
@@ -95,7 +101,7 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="container">
           <div className={`nav-container ${sticky ? "cont-sticky" : ""}`}>
-            <Link to="/">
+            <Link to="/serene-shop">
               <img
                 onClick={scrollToTop}
                 src={LogoImg}
@@ -104,10 +110,16 @@ const Navbar = () => {
               />
             </Link>
             <div className="nav-links">
-              <Link onClick={() => window.scrollTo(0, 0)} to="/categories">
+              <Link
+                onClick={() => window.scrollTo(0, 0)}
+                to="/serene-shop/categories"
+              >
                 categories
               </Link>
-              <Link onClick={() => window.scrollTo(0, 0)} to="/product/1">
+              <Link
+                onClick={() => window.scrollTo(0, 0)}
+                to="/serene-shop/product/1"
+              >
                 product detail
               </Link>
               <span

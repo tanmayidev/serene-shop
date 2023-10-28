@@ -7,7 +7,7 @@ const CategoriesBody = ({ filteredProducts }) => {
       <div className="container">
         <div className="categories-grid">
           {filteredProducts.map(({ id, img, description, price }) => (
-            <Link key={id} to={`/product/${id}`}>
+            <Link key={id} to={`/serene-shop/product/${id}`}>
               <ProductItem
                 key={id}
                 img={img}
