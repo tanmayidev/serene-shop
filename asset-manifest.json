@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/serene-shop/static/css/main.a2e1f3bd.css",
+    "main.css": "/serene-shop/static/css/main.24d926e3.css",
     "main.js": "/serene-shop/static/js/main.731694e6.js",
     "static/media/bodyoil1.jpg": "/serene-shop/static/media/bodyoil1.df87658baed4f2785f85.jpg",
     "static/media/14.png": "/serene-shop/static/media/14.a674c36b5a4aa0bb7377.png",
@@ -67,11 +67,11 @@
     "static/media/copenhagen1.webp": "/serene-shop/static/media/copenhagen1.39e6de3d2e09d6e5f7ef.webp",
     "static/media/blackandwhite2.webp": "/serene-shop/static/media/blackandwhite2.1dac1e8c88ee5d5f213b.webp",
     "index.html": "/serene-shop/index.html",
-    "main.a2e1f3bd.css.map": "/serene-shop/static/css/main.a2e1f3bd.css.map",
+    "main.24d926e3.css.map": "/serene-shop/static/css/main.24d926e3.css.map",
     "main.731694e6.js.map": "/serene-shop/static/js/main.731694e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2e1f3bd.css",
+    "static/css/main.24d926e3.css",
     "static/js/main.731694e6.js"
   ]
 }
